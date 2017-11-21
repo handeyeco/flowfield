@@ -12,10 +12,10 @@ class FlowField {
     this.yoff = 0;
     this.zoff = 0;
 
-    this.init();
+    this.clear();
   }
 
-  init() {
+  clear() {
     // Due to some wonkiness,
     // can't call getImageData on empty canvas
     this.ctx.fillStyle = '#FFFFFF';
@@ -23,10 +23,6 @@ class FlowField {
   }
 
   draw(drawBackground){
-    if (!drawBackground) {
-      this.init();
-    }
-
     // Grab all of the canvas pixels
     let imageData = this.ctx.getImageData(0, 0, this.width, this.height);
     let data = imageData.data;
@@ -58,6 +54,9 @@ class FlowField {
     if (drawBackground) {
       // Draw pixels to canvas
       this.ctx.putImageData(imageData, 0, 0);
+    } else {
+      // Clear canvas
+      this.clear();
     }
 
     // Return pixel data so it can be used to set arrow direction
