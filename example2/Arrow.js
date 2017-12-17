@@ -3,15 +3,11 @@ class Arrow {
     // Grab canvas references and set x/y
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
-    this.alive = true;
     this.x = x;
     this.y = y;
   }
 
   draw(angle = 0, xVel, yVel) {
-
-    // console.log(this.x, xVel);
-
     let ctx = this.ctx;
     // Maintain previous canvas state
     ctx.save();
@@ -36,9 +32,7 @@ class Arrow {
     this.y += Math.round(yVel);
   }
 
-  checkStatus(canvasWidth, canvasHeight) {
-    if (!this.x || !this.y || this.x < 0 || this.x > canvasWidth || this.y < 0 || this.y > canvasHeight) {
-      this.alive = false;
-    }
+  isAlive(canvasWidth, canvasHeight) {
+    return !(!this.x || !this.y || this.x < 0 || this.x > canvasWidth || this.y < 0 || this.y > canvasHeight);
   }
 }
