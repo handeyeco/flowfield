@@ -2,11 +2,44 @@
 <html>
   <head>
     <title>Noise</title>
+
+    <style>
+      body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+    
+      .container {
+        max-width: 40em;
+      }
+      
+      .flex {
+        margin: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
 
-  <body>
-    <a href="example1/example1.html">Example 1</a>
-    <a href="example2/example2.html">Example 2</a>
-    <a href="example3/example3.html">Example 3</a>
+  <body class="flex">
+    <div class="container flex">
+      <p>
+        This is a reinterpretation of Andy Saia's work with vector flow fields. Rather than Flash and Perlin Noise, these examples use Canvas and Simplex Noise.
+      </p>
+      <div class="flex">
+        <a href="example1/example1.html">Example 1</a>
+        <a href="example2/example2.html">Example 2</a>
+        <a href="example3/example3.html">Example 3</a>
+      </div>
+      <div class="flex">
+        <a href="https://github.com/matthewbryancurtis/flowfield">Source code</a>
+        <a href="http://www.andysaia.com/radicalpropositions/perlin-noise-flow-fields/">Andy Saia's original article</a>
+        <a href="https://github.com/jwagner/simplex-noise.js">Jonas Wagner's Simplex library</a>
+        
+      </div>
+    </div>
   </body>
 </html>
