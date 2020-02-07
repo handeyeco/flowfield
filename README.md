@@ -5,7 +5,7 @@ Perlin/Simplex noise flow field in Canvas
 A recreation of Andy Saia's work with flow fields using JavaScript/Canvas instead of ActionScript/Flash.
 
 See the examples:
-https://matthewbryancurtis.github.io/flowfield/
+https://handeyeco.github.io/flowfield/
 
 For Andy Saia's excellent article on flow fields: http://www.andysaia.com/radicalpropositions/perlin-noise-flow-fields/
 
